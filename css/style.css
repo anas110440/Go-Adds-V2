@@ -19,7 +19,9 @@ body {
   overflow: hidden;
 }
 /* End Sidebar */
-
+.nav-mobail {
+  display: none;
+}
 .sidebar {
   background-color: var(--main-color);
   height: 100%;
@@ -286,4 +288,99 @@ body {
 .suggest .copy-right p {
   color: #707070;
   font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .go-adds .nav-mobail {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+  }
+  .go-adds .nav-mobail svg {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+  }
+  .go-adds .nav-mobail svg:hover {
+    opacity: 1;
+  }
+  .posts {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sm-d-n {
+    display: none;
+  }
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login img {
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+.login h1 {
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--secondery-color);
+}
+.login form {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.login form a.forget {
+  color: #6c757d;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: 600;
+}
+.login form label {
+  color: #6c757d;
+  cursor: pointer;
+}
+.login form .btn-warning {
+  background-color: var(--secondery-color);
+  border-color: var(--secondery-color);
+  border-radius: 18px;
+  padding: 10px;
+  width: 70%;
+}
+
+.login .create-account {
+  color: #6c757d;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login .create-account span {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 15px;
+}
+.sign-up h1 {
+  font-size: 50px;
+}
+.sign-up form label {
+  color: var(--main-color);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content {
+  border-color: #fff;
 }
