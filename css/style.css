@@ -25,13 +25,11 @@ body {
 .sidebar {
   background-color: var(--main-color);
   height: 100%;
+  min-height: 100vh;
   padding: 30px 0;
   position: relative;
 }
-.sidebar .container-fixed {
-  position: fixed;
-  left: 20px;
-}
+
 .sidebar .logo {
   margin-bottom: 30px;
 }
@@ -40,7 +38,10 @@ body {
   display: block;
   margin: auto;
 }
-
+.sidebar .navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 .sidebar .navigation ul li {
   color: var(--white);
   font-size: 19px;
@@ -125,6 +126,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.posts .post .auth-info a {
+  text-decoration: none;
 }
 .posts .post .auth-info .avatar img {
   width: 60px;
@@ -384,3 +388,76 @@ body {
 .modal-content {
   border-color: #fff;
 }
+
+/* Start Profile */
+.profile {
+  padding: 80px 40px 40px 40px;
+}
+.profile .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile .user-info .info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.profile .user-info .info img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.profile .user-info .info .name {
+  color: var(--main-color);
+}
+.profile .option .dropdown-toggle:focus {
+  box-shadow: none;
+}
+.profile .option .dropdown-toggle::after {
+  border: none;
+}
+.profile .option i {
+  font-size: 1.5em;
+  color: var(--main-color);
+}
+.followers-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+  padding: 0 40px 0 40px;
+}
+.followers-info .followers {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px);
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 19px;
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.followers-info .followers:nth-of-type(2) {
+  border-left: 1.5px solid #707070;
+  border-right: 1.5px solid #707070;
+}
+.videos {
+  padding: 0 40px;
+}
+.videos .video {
+  margin-bottom: 10px;
+}
+.videos .video video {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+/* End Profile */
