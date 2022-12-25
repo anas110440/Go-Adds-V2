@@ -293,6 +293,11 @@ body {
   color: #707070;
   font-size: 16px;
 }
+@media screen and (max-width: 760px) {
+  .follow-btn {
+    padding: 10px 10px;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .go-adds .nav-mobail {
